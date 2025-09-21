@@ -9,7 +9,7 @@ func WriteExcel(file string, records []Record, headers []string) error {
 	excel.NewSheet(sheet)
 	rowCounter := 1
 
-	// Заголовки
+	// Headers
 	for j, h := range headers {
 		cell, _ := excelize.CoordinatesToCellName(j+1, rowCounter)
 		excel.SetCellValue(sheet, cell, h)
