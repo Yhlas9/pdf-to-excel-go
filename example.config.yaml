@@ -1,0 +1,29 @@
+# Path to your PDF file
+input_file: "your_file.pdf"
+
+# Path to save the Excel output
+output_file: "excel_file/output.xlsx"
+
+# Page range to read from the PDF
+start_page: 1
+end_page: 0  # 0 = until the end
+
+# Column headers for Excel
+headers:
+  - Kod
+  - BS
+  - Hünär
+  - Tariff
+
+# Column indicating the start of a new record (CRUCIAL!)
+start_column: "Kod"
+
+# Column for all text that didn't match any regex
+text_column: "Hünär"
+
+# Regular expressions to extract values for each column
+# ⚠️ Programmers only! Adjust these patterns to match your PDF.
+patterns:
+  Kod: '\d{6}'        # Example: 6-digit number
+  BS: '^\d$'           # Example: single digit
+  Tariff: '^\d{1,2}(-\d{1,2})?$'  # Example: 1-2 digits or a range (1-3)
