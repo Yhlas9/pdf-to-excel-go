@@ -1,0 +1,16 @@
+input_file: "book.pdf"                  # Path to your PDF
+output_file: "excel_file/output6.xlsx"  # Path to your output Excel file
+start_page: 11
+end_page: 0   # 0 = until the end
+headers:
+  - Kod
+  - BS
+  - Hünär
+  - Tariff
+start_column: "Kod"  # Column indicating the start of a new record
+text_column: "Hünär" # Column for all text that didn't match any regex
+patterns:
+  Kod: '\d{6}'
+  BS: '^\d$'
+  Tariff: '^\d{1,2}(-\d{1,2})?$'
+  IDK: '^\d{4}'

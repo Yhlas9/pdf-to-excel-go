@@ -2,6 +2,8 @@ module pdf_to_excel
 
 go 1.24.4
 
+require gopkg.in/yaml.v3 v3.0.1
+
 require (
 	github.com/richardlehane/mscfb v1.0.4 // indirect
 	github.com/richardlehane/msoleps v1.0.4 // indirect
